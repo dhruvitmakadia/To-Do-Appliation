@@ -1,0 +1,18 @@
+<h3 style="text-align: center">Events Detail</h3>
+
+<div class="row">
+    <div class="column" *ngFor='let data of eventData; trackBy: trackByEventName'>
+        <div class="card">
+            <h3>
+                <div class="tooltip"><i (click)="viewDetail(data)" style="cursor: pointer;">{{data.title}}</i>
+                    <span class="tooltiptext">Click here to view detail</span>
+                </div>
+            </h3>
+            <p>
+                <i (click)="removeDetail(data)" class="fa fa-remove"
+                    style="cursor: pointer;font-size:25px;color:red;"></i>
+            </p>
+        </div>
+    </div>
+</div>
+

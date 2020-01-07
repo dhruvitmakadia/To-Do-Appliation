@@ -1,0 +1,14 @@
+<div>
+    <h3 style="text-align: center">Add New Event</h3>
+    <input type="text" [(ngModel)]='newTitle' placeholder="Enter Event Title..."><br>
+    <input type="text" [(ngModel)]='newDetail'placeholder="Enter Event Detail..."><br>
+    <button (click)="addEvent()"> Add </button>
+</div>
+<app-event-detail [eventData]='eventDetails' (sendData)='getData($event)' (deleteData)='delete($event)'>
+</app-event-detail>
+
+<div *ngIf='selectEvent.title'>
+    <h4>Event Title : {{selectEvent.title}}</h4>
+    <h5>Detail Of Event : {{selectEvent.detail}} </h5>
+    
+</div>
